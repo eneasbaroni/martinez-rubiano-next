@@ -1,0 +1,113 @@
+.workContainer {
+  border-bottom: var(--main-border);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.dataContainer {  
+  align-content: space-between;
+  grid-column: 1 / span 4;  
+}
+
+.obraNombre {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.obraTipo, .obraAnio {
+  font-size: 0.85rem;
+  color: var(--third-color);
+}
+
+.workVer {
+  font-size: 1rem;
+  display: inline-block !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0.2rem 0.6rem;
+  border: solid 1px var(--main-color);
+  border-radius: 1rem;
+  cursor: pointer;
+  align-self: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.workVer:hover {
+  transform: translate(0.4vw); 
+}
+
+.imagesContainer {
+  border-left: var(--main-border);
+  grid-column: 5 / span 8;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* .imagesContainer first child */
+.imagesContainer > *:first-child {
+  grid-column: auto / span 5;
+}
+
+.imagesContainer > *:nth-child(2) {
+  grid-column: auto / span 7;   
+}
+
+.obraImg {  
+  height: 25vw;  
+  object-fit: cover;
+  position: relative;
+}
+
+.obraImg img {
+  padding: 0.5rem !important;;  
+}
+
+@media screen and (max-width: 1200px) {
+  .obraNombre { 
+    font-size: 1.1rem;      
+  }
+  .obraTipo, .obraAnio, .workVer {
+    font-size: 0.8rem;    
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .obraNombre { 
+    font-size: 1rem;      
+  }
+  .obraTipo, .obraAnio, .workVer {
+    font-size: 0.7rem;    
+  }
+
+  .obraImg {  
+    height: 35vw;  
+    object-fit: cover;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  
+  .dataContainer {  
+    align-content: space-between;
+    grid-column: 1 / span 12;  
+  }
+
+  .imagesContainer {
+    border-left: none;
+    grid-column: 1 / span 12;
+  }
+
+  .workVer {
+    display: none !important;
+  }
+
+  .imagesContainer {
+    gap: 0.5rem;
+  }
+
+  .obraImg img {
+    padding: 0 !important; 
+    padding-bottom: 0.5rem !important; 
+  }
+}

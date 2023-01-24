@@ -1,0 +1,126 @@
+.obrasContainer {
+  margin-top: 15vh;
+  /* margin-bottom: 20vh; */
+}
+
+
+.obras {
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);  
+}
+
+.obraContainer {
+  grid-column: auto / span 1;  
+  border-bottom: var(--main-border);;    
+  padding: 1rem;  
+}
+
+.bLeft {
+  border-left: var(--main-border);;
+}
+
+.obraImage {
+  height: 30vw;
+  object-fit: cover;
+}
+
+.obraVer {
+  font-size: 1rem; 
+  cursor: pointer;
+  align-self: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.obraVer:hover {
+  transform: translate(0.4vw); 
+}
+
+/* ASESORAMIENTO */
+.asesoramientoContainer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.asesoramientoContainer div:first-child {
+  grid-column: span 3;    
+}
+
+.asesoramientoContainer div:nth-child(2) {
+  grid-column: 9 / span 4; 
+  display: flex;
+}
+
+.mediaButton {
+  font-size: 1rem;
+  display: inline-block !important;
+  width: auto !important;
+  padding: 0.2rem 0.6rem;
+  border: var(--main-border);;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.mediaButton:hover {
+  transform: translate(0.4vw); 
+}
+
+
+/* Media Querys */
+
+@media screen and (max-width: 1200px) {
+  .obraVer, .mediaButton  { 
+    font-size: 0.8rem;      
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .obraVer, .mediaButton  { 
+    font-size: 0.7rem;      
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .obraContainer {
+    grid-column: auto / span 3; 
+    padding: 1rem 0;  
+  }
+
+  .obraImage {
+    height: 90vw;
+    object-fit: cover;
+    padding-top: 0.5rem !important;
+  } 
+
+  .bLeft {
+    border-left: none;
+  }
+
+  .asesoramientoContainer {
+    text-align: center;
+  }
+
+  .asesoramientoContainer div:first-child {
+    grid-column: span 12;    
+  }
+  
+  .asesoramientoContainer div:nth-child(2) {
+    grid-column: auto / span 12; 
+    display: flex;
+  }
+
+  .astoBtns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .astoBtns .mediaButton {
+    margin: auto;
+  }
+
+
+}
+

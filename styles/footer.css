@@ -1,0 +1,59 @@
+.footer {
+  background-color: rgb(0, 0, 29);
+  background-color: var(--main-bg);
+  /* border-top: solid 1px var(--main-color); */
+  padding: 0.5rem 3rem;  
+  height: auto; 
+  border-top: var(--main-border);
+}
+
+.footer .footerTitle {
+  font-size: 0.9rem;   
+}
+
+.footer .footerTitle span {  
+  font-weight: 500;  
+}
+
+.footer p {
+  font-size: 0.8rem; 
+  padding-top: 1rem;  
+}
+
+.footer div, .footer p {
+  color: var(--first-color);
+}
+
+.mailIcon {  
+  height: 1.2rem ; 
+  cursor: pointer;
+  position: relative;
+}
+
+.mailIcon {    
+  filter: invert(5%) sepia(62%) saturate(7398%) hue-rotate(243deg) brightness(95%) contrast(119%);
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .footer p  { 
+    font-size: 0.7rem;      
+  }
+
+  .mailIcon {
+    height: 1.5rem ;  
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer p  { 
+    font-size: 0.6rem;      
+  }
+  .footer {
+    padding: 0 1rem;     
+  }
+  .mailIcon {
+    height: 1.3rem ;  
+  }
+}
